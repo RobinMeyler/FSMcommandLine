@@ -3,6 +3,7 @@
 
 #include "State.h"
 
+
 #include <iostream>
 
 class Climbing : public State
@@ -10,11 +11,8 @@ class Climbing : public State
 public:
 	Climbing();
 	~Climbing();
-	void idle()
-	{
-		std::cout << "Going from Climbing to Idling" << std::endl;
-		delete this;
-	}
+	void idle(Animation *a);
+	void jumping(Animation *a);
 };
 
 #endif

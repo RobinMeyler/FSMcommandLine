@@ -11,6 +11,7 @@ public:
 	Jumping();
 	~Jumping();
 	void idle(Animation *a);
+	void climbing(Animation *a);
 };
 
 #endif // !Jumping_h
