@@ -1,10 +1,9 @@
 #ifndef Animation_h
 #define Animation_h
 
+
+
 class State;
-#include "Idle.h"
-#include "Jumping.h"
-#include "Climbing.h"
 
 class Animation
 {
@@ -22,5 +21,5 @@ public:
 	void climbing();
 };
 
-#endif
+#endif // !Animation_h
 #include "State.h"

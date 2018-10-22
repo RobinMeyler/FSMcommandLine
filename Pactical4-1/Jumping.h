@@ -1,7 +1,9 @@
 #ifndef Jumping_h
 #define Jumping_h
 
-#include "Animation.h"
+
+
+#include "State.h"
 
 class Jumping : public State
 {
@@ -10,5 +12,5 @@ public:
 	~Jumping();
 	void idle(Animation *a);
 };
-#endif
 
+#endif // !Jumping_h

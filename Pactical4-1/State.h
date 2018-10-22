@@ -1,10 +1,10 @@
 #ifndef State_h
 #define State_h
 
-
 #include <iostream>
 
-class Animation;
+
+#include "Animation.h"
 
 class State
 {
@@ -25,6 +25,6 @@ public:
 
 
 };
-#include "Animation.h"
-#endif // !State
 
+
+#endif
