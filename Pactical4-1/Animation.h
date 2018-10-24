@@ -19,6 +19,12 @@ public:
 	void idle();
 	void jumping();
 	void climbing();
+	void walking();
+	void hammering();
+	void shoveling();
+	void swordmanShip();
+	
+
 };
 
 #endif // !Animation_h

@@ -1,4 +1,7 @@
 // Robin Meyler
+// Login: C00231699
+// Date: October 2018
+// Program: Finite State Machine - command line
 
 #ifdef _DEBUG 
 #pragma comment(lib,"sfml-graphics-d.lib") 
@@ -22,22 +25,15 @@
 #include <thread>
 
 #include "State.h"
-#include "Idle.h"
-#include "Jumping.h"
-#include "Climbing.h"
 
 
 int main()
 {
 	Animation fsm;
 	fsm.idle();
-	bool cClicked = false;
-	bool jClicked = false;
-	bool iClicked = false;
-	
 	
 	std::chrono::milliseconds sleeps(1000);
-	std::chrono::milliseconds lessSleeps(100);
+
 	while (true)
 	{
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::C))
@@ -53,6 +49,27 @@ int main()
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::I))
 		{
 			fsm.idle();
+			std::this_thread::sleep_for(sleeps);
+		}
+
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
+		{
+			fsm.walking();
+			std::this_thread::sleep_for(sleeps);
+		}
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
+		{
+			fsm.shoveling();
+			std::this_thread::sleep_for(sleeps);
+		}
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::F))
+		{
+			fsm.swordmanShip();
+			std::this_thread::sleep_for(sleeps);
+		}
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::H))
+		{
+			fsm.hammering();
 			std::this_thread::sleep_for(sleeps);
 		}
 	}
