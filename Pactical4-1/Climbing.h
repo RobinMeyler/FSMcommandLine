@@ -2,12 +2,6 @@
 #define Climbing_h
 
 #include "State.h"
-#include "Jumping.h"
-#include "idle.h"
-#include "Shoveling.h"
-#include "SwordmanShip.h"
-#include "Hammering.h"
-#include "Walking.h"
 
 
 #include <iostream>

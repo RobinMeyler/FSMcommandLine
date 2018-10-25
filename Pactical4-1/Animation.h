@@ -1,7 +1,8 @@
 #ifndef Animation_h
 #define Animation_h
 
-
+#include <string.h>
+#include <iostream>
 
 class State;
 
@@ -16,6 +17,7 @@ public:
 	{
 		current = s;
 	}
+	
 	void idle();
 	void jumping();
 	void climbing();
@@ -23,7 +25,7 @@ public:
 	void hammering();
 	void shoveling();
 	void swordmanShip();
-	
+
 
 };
 

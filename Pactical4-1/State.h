@@ -27,7 +27,7 @@ public:
 	}
 	virtual void swordmanShip(Animation * a)
 	{
-		std::cout << "swordmanShip" << std::endl;
+		std::cout << "Sword fighting" << std::endl;
 	}
 	virtual void shoveling(Animation * a)
 	{
@@ -38,6 +38,12 @@ public:
 		std::cout << "walking" << std::endl;
 	}
 };
-
+#include "Jumping.h"
+#include "Climbing.h"
+#include "idle.h"
+#include "SwordmanShip.h"
+#include "Hammering.h"
+#include "Walking.h"
+#include "shoveling.h"
 
 #endif

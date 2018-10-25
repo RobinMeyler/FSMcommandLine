@@ -11,39 +11,39 @@ Jumping::~Jumping()
 
 void Jumping::idle(Animation * a)
 {
-	std::cout << "Going from Jumping to Idling" << std::endl;
+	std::cout << "Stop jumping, now idle" << std::endl;
 	a->setCurrent(new Idle());
 	delete this;
 }
 
 void Jumping::climbing(Animation * a)
 {
-	std::cout << "Going from Jumping to climbing" << std::endl;
+	std::cout << "Jump to a wall and start climbing" << std::endl;
 	a->setCurrent(new Climbing());
 	delete this;
 }
 
 void Jumping::walking(Animation * a)
 {
-	std::cout << "Going from Jumping to walking" << std::endl;
-	a->setCurrent(new Walking());
+	std::cout << "Can't walk in the air, don't be ridiculous" << std::endl;
+	a->setCurrent(new Jumping());
 	delete this;
 }
 void Jumping::shoveling(Animation * a)
 {
-	std::cout << "Going from Jumping to shoveling" << std::endl;
-	a->setCurrent(new Shoveling());
+	std::cout << "There's nothing to shovel in mid air, obviously" << std::endl;
+	a->setCurrent(new Jumping());
 	delete this;
 }
 void Jumping::swordmanShip(Animation * a)
 {
-	std::cout << "Going from Jumping to swordmaship" << std::endl;
-	a->setCurrent(new SwordmanShip());
+	std::cout << "Can't fight in the air, too heavy" << std::endl;
+	a->setCurrent(new Jumping());
 	delete this;
 }
 void Jumping::hammering(Animation * a)
 {
-	std::cout << "Going from Jumping to hammering" << std::endl;
-	a->setCurrent(new Hammering());
+	std::cout << "Hammer what? oxygen? No." << std::endl;
+	a->setCurrent(new Jumping());
 	delete this;
 }

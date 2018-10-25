@@ -4,12 +4,7 @@
 
 
 #include "State.h"
-#include "Jumping.h"
-#include "Climbing.h"
-#include "idle.h"
-#include "SwordmanShip.h"
-#include "Hammering.h"
-#include "Walking.h"
+
 
 class Shoveling : public State
 {

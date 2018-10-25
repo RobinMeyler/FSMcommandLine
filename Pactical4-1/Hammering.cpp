@@ -10,39 +10,39 @@ Hammering::~Hammering()
 
 void Hammering::idle(Animation * a)
 {
-	std::cout << "Going from Hammering to Idling" << std::endl;
+	std::cout << "Stop hammering and start idling" << std::endl;
 	a->setCurrent(new Idle());
 	delete this;
 }
 
 void Hammering::climbing(Animation * a)
 {
-	std::cout << "Going from Hammering to climbing" << std::endl;
-	a->setCurrent(new Climbing());
+	std::cout << "Put the hammer away, swap to idle ready to climb" << std::endl;
+	a->setCurrent(new Idle());
 	delete this;
 }
 
 void Hammering::walking(Animation * a)
 {
-	std::cout << "Going from Hammering to walking" << std::endl;
-	a->setCurrent(new Walking());
+	std::cout << "Put the hammer away, swap to idle, ready to walk" << std::endl;
+	a->setCurrent(new Idle());
 	delete this;
 }
 void Hammering::shoveling(Animation * a)
 {
-	std::cout << "Going from Hammering to shoveling" << std::endl;
-	a->setCurrent(new Shoveling());
+	std::cout << "Put the hammer away, swap to idle, ready to Shovel" << std::endl;
+	a->setCurrent(new Idle());
 	delete this;
 }
 void Hammering::swordmanShip(Animation * a)
 {
-	std::cout << "Going from Hammering to swordmaship" << std::endl;
-	a->setCurrent(new SwordmanShip());
+	std::cout << "Put the hammer away, swap to idle, ready to Fight" << std::endl;
+	a->setCurrent(new Idle());
 	delete this;
 }
 void Hammering::jumping(Animation * a)
 {
-	std::cout << "Going from Hammering to jumping" << std::endl;
-	a->setCurrent(new Jumping());
+	std::cout << "Put the hammer away, swap to idle, ready to jump" << std::endl;
+	a->setCurrent(new Idle());
 	delete this;
 }

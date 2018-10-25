@@ -19,7 +19,7 @@
 
 #include <SFML/Graphics.hpp>
 
-
+#include <string.h>
 #include <iostream>
 #include <chrono>
 #include <thread>
@@ -29,6 +29,7 @@
 
 int main()
 {
+	std::cout << "I: Idle\nW: Walking\nJ: Jumping\nC: Climbing\ns: Shoveling\nF: Swordmanship\nH: Hammering" << std::endl;
 	Animation fsm;
 	fsm.idle();
 	
@@ -51,7 +52,6 @@ int main()
 			fsm.idle();
 			std::this_thread::sleep_for(sleeps);
 		}
-
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
 		{
 			fsm.walking();
